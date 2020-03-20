@@ -1,0 +1,40 @@
+{
+  "name": "draft",
+  "version": "0.1.0",
+  "description": "A Node.js based web application.",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c && cp ./out/* ./htdocs/js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ywchiao@github.com/ywchiao/draft.git"
+  },
+  "keywords": [
+    "Node.js",
+    "TypeScript"
+  ],
+  "author": "Yiwei Chiao <ywchiao@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ywchiao/draft/issues"
+  },
+  "homepage": "https://github.com/ywchiao/draft#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-typescript": "^7.8.3",
+    "eslint": "^6.8.0",
+    "prettier-eslint-cli": "^5.0.0",
+    "rollup": "^2.1.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4"
+  }
+}
