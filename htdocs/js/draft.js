@@ -75,6 +75,14 @@
   var content = function content() {
     var el = document.createElement('main');
     el.style.height = 'calc(100vh - 6rem)';
+    el.style.width = '100%';
+    el.style.display = 'flex';
+    var card = document.createElement('div');
+    card.className = 'card';
+    var textArea = document.createElement('textarea');
+    textArea.textContent = 'this is a test string of the textarea';
+    card.appendChild(textArea);
+    el.appendChild(card);
     return el;
   };
 

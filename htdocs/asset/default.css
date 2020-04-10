@@ -1,0 +1,150 @@
+/**
+ *  @file       default.css
+ *  @brief      The Default css file for the ulog.
+ *  @author     Yiwei Chiao (ywchiao@gmail.com)
+ *  @date       03/26/2018 createdf
+ *  @date       06/04/2018 last modified.
+ *  @version    0.1.0
+ *  @since      0.1.0
+ *  @copyright  MIT, © 2018 Yiwei Chiao
+ *  @details
+ *
+ *  The Default css file for the ulog.
+ */
+
+html {
+  font-size: 10px;
+  height: 100vh;
+}
+
+textarea {
+  border: 1px solid #999999;
+  width: 90%;
+  margin: 5px 0;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+.button {
+  font-size: 1rem;
+  height: 1.2rem;
+}
+
+.card {
+  border-radius: 3px;
+  border: 1px solid azure;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: .25rem .5rem;
+  margin: 1rem 3rem;
+  box-shadow: 1px 3px;
+  background-color: #ffefcf;
+  opacity: .75;
+  text-align: center;
+}
+
+.edit-area {
+  height: 16rem;
+  margin: .25rem;
+  outline: 1px solid;
+  overflow: auto;
+  padding: .25rem;
+  text-align: left;
+}
+
+.edit-tool {
+  padding: 2px;
+}
+
+.flex-main {
+  flex-grow: 1
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.nav-bar {
+  margin: 0 2rem;
+  text-align: right;
+}
+
+.nav-item {
+  display: inline;
+  margin: 0 .5rem;
+}
+
+.nav-link:hover {
+  color: #d0d0d0;
+}
+
+.post-title {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.site-body {
+  padding: 0 .5rem;
+}
+
+.site-brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: .25rem;
+}
+
+.site-burger {
+  margin-left: auto;
+}
+
+.site-content {
+  flex: 1 0 auto;
+  padding: 1rem;
+}
+
+.site-menu {
+  flex: 0 1 auto;
+  margin: .25rem;
+  padding: .25rem;
+  z-index: 9;
+}
+
+.site-footer {
+  flex-shrink: 0;
+  padding: .1rem .5rem;
+  margin-top: auto;
+  color: SteelBlue;
+  background: MidnightBlue;
+  text-align: right;
+}
+
+.site-header {
+  position: fixed;
+  background: Aqua;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 9.5rem;
+  padding: 0.25rem 1rem;
+  z-index: 99;
+}
+
+.site-header-shadow {
+  height: 9.5rem;
+}
+
+.toolbar {
+  text-align: left;
+}
+
+#btn-edit {
+  align-self: center;
+  background-color: #ffffff00;
+  border: hidden;
+}
+
+/* default.css */
