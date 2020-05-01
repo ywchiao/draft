@@ -13,9 +13,14 @@
  */
 'use strict';
 
+//import "regenerator-runtime/runtime.js";
+
+import { loadFonts } from "./font/font";
 import Draft from './draft/draft.js';
 
 window.addEventListener('load', () => {
+  loadFonts();
+
   let draft = Draft();
 
   document.getElementsByTagName('html')[0].style.height = '100vh';

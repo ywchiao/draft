@@ -2,6 +2,27 @@
   'use strict';
 
   /**
+   *  @file       font.ts
+   *  @brief      The Font module of the Font subsystem.
+   *  @author     Yiwei Chiao (ywchiao@gmail.com)
+   *  @date       06/25/2019 created.
+   *  @date       04/17/2020 last modified.
+   *  @version    0.1.0
+   *  @since      0.1.0
+   *  @copyright  MIT, © 2019, 2020 Yiwei Chiao
+   *  @details
+   *
+   *  The Font module of the Font subsystem.
+   */
+
+  let loadFonts = async () => {
+    const font = new FontFace("jason-writing", "url(./asset/font/JasonHandwriting1.woff)");
+    await font.load();
+    document.fonts.add(font);
+  };
+   // font/font.ts
+
+  /**
    *  @file       container.js
    *  @brief      The Container module of Draft.
    *  @author     Yiwei Chiao (ywchiao@gmail.com)
@@ -15,22 +36,21 @@
    *  The Container module of the Draft.
    */
 
-  var container = function container() {
-    var el = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'div';
+  const container = function (el = 'div') {
     this.node = document.createElement(el);
     this.node.style.height = '100vh';
   };
 
   container.prototype = {
-    setHeader: function setHeader(header) {
+    setHeader: function (header) {
       this.node.insertBefore(header, this.node.firstChild);
       return this;
     },
-    setContent: function setContent(content) {
+    setContent: function (content) {
       this.node.insertBefore(content, this.node.querySelector('footer'));
       return this;
     },
-    setFooter: function setFooter(footer) {
+    setFooter: function (footer) {
       this.node.appendChild(footer);
       return this;
     }
@@ -51,9 +71,9 @@
    *  The Draft module of the Draft.
    */
 
-  var banner = function banner() {
-    var el = document.createElement('header');
-    var title = document.createElement('h1');
+  const banner = function () {
+    let el = document.createElement('header');
+    let title = document.createElement('h1');
     title.textContent = 'Draft';
     el.appendChild(title);
     el.style.background = '#00a0ffff';
@@ -61,9 +81,9 @@
     return el;
   };
 
-  var footer = function footer() {
-    var el = document.createElement('footer');
-    var copyright = document.createElement('p');
+  const footer = function () {
+    let el = document.createElement('footer');
+    let copyright = document.createElement('p');
     copyright.textContent = '© 2020, Yiwei Chiao';
     copyright.style.margin = '0';
     el.appendChild(copyright);
@@ -72,22 +92,25 @@
     return el;
   };
 
-  var content = function content() {
-    var el = document.createElement('main');
+  const content = () => {
+    let el = document.createElement('main');
     el.style.height = 'calc(100vh - 6rem)';
     el.style.width = '100%';
     el.style.display = 'flex';
-    var card = document.createElement('div');
+    let card = document.createElement('div');
     card.className = 'card';
-    var textArea = document.createElement('textarea');
-    textArea.textContent = 'this is a test string of the textarea';
+    let textArea = document.createElement('textarea');
+    textArea.style = `
+    font-family: jason-writing;
+  `;
+    textArea.textContent = '這是中文測試';
     card.appendChild(textArea);
     el.appendChild(card);
     return el;
   };
 
   function Draft () {
-    var draft = new container('div');
+    let draft = new container('div');
     return draft.setHeader(banner()).setFooter(footer()).setContent(content());
   }
    // draft.js
@@ -105,8 +128,9 @@
    *
    *  The entry point of Draft.
    */
-  window.addEventListener('load', function () {
-    var draft = Draft();
+  window.addEventListener('load', () => {
+    loadFonts();
+    let draft = Draft();
     document.getElementsByTagName('html')[0].style.height = '100vh';
     document.body.style.height = '100vh';
     document.body.style.margin = '0';

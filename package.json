@@ -21,6 +21,7 @@
     "url": "https://github.com/ywchiao/draft/issues"
   },
   "homepage": "https://github.com/ywchiao/draft#readme",
+  "browserslist": "chrome 74",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
@@ -30,11 +31,8 @@
     "@babel/preset-typescript": "^7.9.0",
     "eslint": "^6.8.0",
     "prettier-eslint-cli": "^5.0.0",
-    "rollup": "^2.4.0",
+    "rollup": "^2.6.1",
     "rollup-plugin-babel": "^4.4.0",
     "typescript": "^3.8.3"
-  },
-  "dependencies": {
-    "core-js": "^3.6.5"
   }
 }

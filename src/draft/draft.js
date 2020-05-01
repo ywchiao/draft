@@ -54,7 +54,10 @@ const content = () => {
   card.className = 'card';
 
   let textArea = document.createElement('textarea');
-  textArea.textContent = 'this is a test string of the textarea';
+  textArea.style=`
+    font-family: jason-writing;
+  `;
+  textArea.textContent = '這是中文測試';
 
   card.appendChild(textArea);
 
