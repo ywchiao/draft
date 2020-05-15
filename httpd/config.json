@@ -1,0 +1,5 @@
+{
+  "/": "../htdocs/index.html",
+  "/asset/default.css": "../htdocs/asset/default.css",
+  "/js/draft.js": "../htdocs/js/draft.js"
+}
